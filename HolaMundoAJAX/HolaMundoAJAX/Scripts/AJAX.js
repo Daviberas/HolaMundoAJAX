@@ -98,18 +98,29 @@ function escribirPersonas(respXML)
     table.setAttribute("border", "1");
     table.setAttribute("cellspacing", "0");
     var array = respXML.getElementsByTagName("persona");
-
+    var fila = document.createElement("TR");
+    var columna = document.createElement("TH");
+    var texto;
+    texto = document.createTextNode("Nombre");
+    columna.appendChild(texto);
+    fila.appendChild(columna);
+    columna = document.createElement("TH");
+    texto = document.createTextNode("Apellidos");
+    columna.appendChild(texto);
+    fila.appendChild(columna);
+    table.appendChild(fila);
+    
     for( i = 0; i<array.length; i++)
     {
-        var fila = document.createElement("TR");
-        var columna1 = document.createElement("TD");
-        var nombre = document.createTextNode(array[i].getElementsByTagName("nombre")[0].textContent);
-        columna1.appendChild(nombre);
-        fila.appendChild(columna1);
-        var columna2 = document.createElement("TD");
-        var apellidos = document.createTextNode(array[i].getElementsByTagName("apellidos")[0].textContent);
-        columna2.appendChild(apellidos);
-        fila.appendChild(columna2);
+        fila = document.createElement("TR");
+        columna = document.createElement("TD");
+        texto = document.createTextNode(array[i].getElementsByTagName("nombre")[0].textContent);
+        columna.appendChild(texto);
+        fila.appendChild(columna);
+        columna = document.createElement("TD");
+        texto = document.createTextNode(array[i].getElementsByTagName("apellidos")[0].textContent);
+        columna.appendChild(texto);
+        fila.appendChild(columna);
         table.appendChild(fila);
     }
     document.getElementById("txtContenedor").innerHTML = "";
