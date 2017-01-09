@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<personas>
+  <persona>
+    <nombre>Makoto</nombre>
+    <apellidos>Naegi</apellidos>
+  </persona>
+  <persona>
+    <nombre>Sayaka</nombre>
+    <apellidos>Maizono</apellidos>
+  </persona>
+  <persona>
+    <nombre>Kyouko</nombre>
+    <apellidos>Kirigiri</apellidos>
+  </persona>
+  <persona>
+    <nombre>Celestia</nombre>
+    <apellidos>Lundeberg</apellidos>
+  </persona>
+</personas>
